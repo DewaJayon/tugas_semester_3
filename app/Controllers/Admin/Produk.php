@@ -1,15 +1,15 @@
 <?php
 
-namespace App\Controllers\User;
+namespace App\Controllers\Admin;
 
-use App\Libraries\Template;
 use App\Controllers\BaseController;
+use App\Libraries\Template;
 
 
 class Produk extends BaseController
 {
     public function index(): string
     {
-        return Template::tampil('user/daftar_produk');
+        return Template::tampil_admin('admin/produk_daftar');
     }
 }
