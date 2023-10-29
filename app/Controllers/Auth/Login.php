@@ -1,15 +1,14 @@
 <?php
 
-namespace App\Controllers\Admin;
+namespace App\Controllers\Auth;
 
 use App\Controllers\BaseController;
-use App\Libraries\Template;
 
 
 class Login extends BaseController
 {
     public function index(): string
     {
-        return Template::tampil_admin('admin/login');
+        return view('auth/login');
     }
 }

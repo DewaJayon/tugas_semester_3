@@ -15,4 +15,4 @@ $routes->get('/admin', 'Admin\Dashboard::index');
 $routes->get('/admin/produk_daftar', 'Admin\Produk::index');
 
 
-$routes->get('/login', 'Admin\Login::index');
+$routes->get('/login', 'Auth\Login::index');
