@@ -13,6 +13,7 @@ $routes->get('/tentang_kami', 'User\Tentang::index');
 
 $routes->get('/admin', 'Admin\Dashboard::index');
 $routes->get('/admin/produk_daftar', 'Admin\Produk::index');
+$routes->get('/admin/tambah_product', 'Admin\Produk::tambah_product');
 
 
 $routes->get('/login', 'Auth\Login::index');

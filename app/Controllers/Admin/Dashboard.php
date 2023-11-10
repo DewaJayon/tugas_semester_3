@@ -10,6 +10,7 @@ class Dashboard extends BaseController
 {
     public function index(): string
     {
-        return Template::tampil_admin('admin/dashboard');
+        $data = [];
+        return Template::tampil_admin('admin/dashboard', $data);
     }
 }
