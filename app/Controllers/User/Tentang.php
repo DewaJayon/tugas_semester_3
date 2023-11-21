@@ -10,6 +10,7 @@ class Tentang extends BaseController
 {
     public function index(): string
     {
-        return Template::tampil('user/tentang_kami');
+        $data = [];
+        return Template::tampil('user/tentang_kami', $data);
     }
 }

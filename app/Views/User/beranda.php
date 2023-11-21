@@ -16,15 +16,15 @@
 
     <!-- Daftar produk start -->
     <div class="row daftar-produk" style="background-color: #f6f6f6; border-radius: 2%;">
-        <?php foreach ($product_list as $key => $row) : ?>
+        <?php foreach ($product_list as $row) : ?>
             <div class="column-3">
-                <img src="<?= base_url(); ?>images/<?= $row['product_image']; ?>" style="width:100%" onclick="openModal();currentSlide(1)" class="hover-shadow cursor">
-                <h2 align="center"><?= $row['product_name']; ?></h2>
-                <div class="harga-produk">Rp. <?= $row['product_price']; ?></div>
-                <p class="text-center"><?= $row['product_description']; ?></p>
+                <img src="<?= base_url('images/' . $row['product_image']); ?>" class="hover-shadow cursor img-responsive" onclick="openModal(<?php echo $row['id_product'] ?>);currentSlide(<?php echo $row['id_product'] ?>)">
+                <h2 align="center"><?= $row['product_name'] ?></h2>
+                <div class="harga-produk">Rp. <?= $row['product_price'] ?></div>
+                <p align="center"><?= $row['product_description']; ?></p>
                 <div class="text-center">
-                    <a href="https://api.whatsapp.com/send?phone=6282146121643" target="_blank">
-                        <img src="<?= base_url(); ?>images/whatsapp-button.png" width="160">
+                    <a href="https://api.whatsapp.com/send?phone=6282146121643&text=Saya%20tertarik%20untuk%20membeli%20produk%20<?= $row['product_name'] ?>%20segera." target="_blank">
+                        <img src="images/whatsapp-button.png" width="160">
                     </a>
                 </div>
             </div>
@@ -36,9 +36,11 @@
     <div id="myModal" class="modal">
         <span class="close cursor" onclick="closeModal()">&times;</span>
         <div class="modal-content">
-            <div class="mySlides">
-                <img src="images/product-1.jpg" style="width:100%">
-            </div>
+            <?php foreach ($product_list as $row) : ?>
+                <div class="mySlides">
+                    <img src="images/<?= $row['product_image']; ?>" style="width:100%">
+                </div>
+            <?php endforeach; ?>
             <!-- Next/previous controls -->
             <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
             <a class="next" onclick="plusSlides(1)">&#10095;</a>

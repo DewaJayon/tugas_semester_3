@@ -10,6 +10,7 @@ class Kontak extends BaseController
 {
     public function index(): string
     {
-        return Template::tampil('user/kontak_kami');
+        $data = [];
+        return Template::tampil('user/kontak_kami', $data);
     }
 }
