@@ -8,7 +8,7 @@
         </div>
         <div class="column-12">
             <h3>Isi form dibawan untuk Tambah Produk :</h3>
-            <form action="<?php base_url('admin/produk/insert') ?>" method="post" enctype="multipart/form-data">
+            <form action="<?= base_url() ?>admin/tambah_produk/insert" method="post" enctype="multipart/form-data">
                 <div class="form-group">
                     <label for="">Nama Produk</label>
                     <input type="text" class="form-control" name="product_name" required>
@@ -27,7 +27,7 @@
                 </div>
                 <div class="form-group">
                     <button type="submit" class="btn btn-success">Simpan Produk</button>
-                    <a href="<?= base_url('admin/manajemen_produk') ?>" class="btn btn-warning">Kembali ke Daftar Produk</a>
+                    <a href="<?= base_url() ?>admin/manajemen_produk" class="btn btn-warning">Kembali ke Daftar Produk</a>
                 </div>
             </form>
         </div>
